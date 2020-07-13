@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
-import { Switch, Router } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import LoginPage from './pages/LoginPage'
+import MainPage from './pages/MainPage'
 
 function App() {
   return (
     <Switch>
-      <Router exact path="/login">
+      <Route exact path="/login">
         <LoginPage></LoginPage>
-      </Router>
+      </Route>
+      <Route path="/positions">
+        <MainPage></MainPage>
+      </Route>
     </Switch>
   );
 }
